@@ -1,0 +1,23 @@
+{
+  "name": "electron-app-go-backend",
+  "version": "1.0.0",
+  "main": "dist/frontend/main.js",
+  "scripts": {
+    "start": "tsc && electron .",
+    "build": "tsc && cd src/backend && go build -o ../../dist/backend/main && cp ../frontend/index.html ../../dist/frontend/",
+    "dev": "npm run build && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "description": "Electron app with Go backend",
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "@types/node": "^20.11.24",
+    "electron": "^29.1.0",
+    "electron-builder": "^24.12.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
